@@ -44,12 +44,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/Edit_text_email"
-                        android:textSize="18sp"
+                        android:textSize="20sp"
                         android:ems="10"
+                        android:hint="@string/enter_email_id"
                         android:inputType="textEmailAddress"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/Edit_text_email"
+                        app:layout_constraintStart_toEndOf="@id/textview_Email"
                         />
                     <TextView
                         android:layout_width="wrap_content"
@@ -64,11 +65,13 @@
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/Password"
+                        android:id="@+id/edittxtPassword"
                         android:ems="10"
-                        android:textSize="18sp"
+                        android:hint="@string/enter_password"
+                        android:textSize="20sp"
                         android:inputType="textPassword"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.428"
                         app:layout_constraintStart_toEndOf="@id/Textview_Pass"
                         app:layout_constraintTop_toBottomOf="@id/Edit_text_email"
 
@@ -81,7 +84,8 @@
                         android:textSize="18sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toStartOf="@id/Edit_text_email"
-                        app:layout_constraintBaseline_toBaselineOf="@+id/Password"
+                        app:layout_constraintTop_toBottomOf="@id/textview_Email"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/edittxtPassword"
                         />
                     <TextView
                         android:layout_width="wrap_content"
@@ -94,7 +98,7 @@
                         android:paddingBottom="50dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/Password"
+                        app:layout_constraintTop_toBottomOf="@id/Textview_Pass"
                         app:layout_constraintHorizontal_bias="0.11"
                         />
                     <Button
@@ -117,43 +121,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/didnotacc"
-                android:text="Dont Have an Account?"
+                android:text="@string/dont_have_an_account"
                 android:textSize="18sp"
                 android:layout_margin="20dp"
                 android:layout_marginTop="20dp"
-                android:paddingBottom="50dp"
+
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/signup"
                 app:layout_constraintHorizontal_bias="0.11"
                 app:layout_constraintTop_toBottomOf="@id/card_view"
-                android:paddingVertical="20dp"
                 />
-
-<!--            <Button-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:id="@+id/textsing_up"-->
-<!--                android:text="Sing up"-->
-<!--                android:textColor="#FFC07F"-->
-<!--                android:textStyle="bold"-->
-<!--                android:textSize="18sp"-->
-<!--                android:layout_margin="20dp"-->
-<!--                android:layout_marginTop="20dp"-->
-<!--                android:paddingBottom="50dp"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintHorizontal_bias="0.80"-->
-<!--                app:layout_constraintTop_toBottomOf="@id/card_view"-->
-<!--                android:paddingVertical="20dp"-->
-<!--                />-->
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
                 android:id="@+id/signup"
-                android:text="SIGN UP"
+                android:text="@string/sign_up"
                 android:textStyle="bold"
-                android:background="#fffff"
+                android:backgroundTint="#FFFF"
                 android:textColor="#db3d91"
                 app:layout_constraintBaseline_toBaselineOf="@+id/didnotacc"
                 app:layout_constraintStart_toEndOf="@id/didnotacc"
@@ -162,5 +147,4 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
